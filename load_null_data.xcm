@@ -1,0 +1,9 @@
+# let's set the directory with the tables
+# note that the directory definition should NOT end with a slash!
+#set NULLDATADIR /home/dovciak/data
+set NULLDATADIR .
+# let's define the tables to be used (e.g. the full ones or the reduced ones)
+data 1 $NULLDATADIR/fake_null_i_300ch.pha
+data 2 $NULLDATADIR/fake_null_q_300ch.pha
+data 3 $NULLDATADIR/fake_null_u_300ch.pha
+setplot energy

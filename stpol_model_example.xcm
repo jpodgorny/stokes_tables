@@ -1,0 +1,27 @@
+model none
+data none
+setplot del all
+
+@load_null_data.xcm
+@STOKES_model_definitions.xcm
+
+mo stpol
+            2.          -0.1        1.4        1.4        3.        3.
+            5.          -10.        5.         5.         20000.    20000.
+            60.         -1.         0.         0.         90.       90.
+            90.         -1.         7.5        7.5        352.5     352.5
+            30.         -1.         12.839     12.839     88.567    88.567
+            0           -0.001      0          0          5         5
+            -0.3        -0.1        -1.        -1.        1.        1.
+            1e-22       -0.01       0          0          1e+20     1e+24
+
+#set null data to be invisible
+setplot command co 0 on 1
+setplot command co 0 on 3
+setplot command co 0 on 5
+
+setplot command log y off
+setplot command rescale y 0 1
+
+cpd /xw
+pl polfrac
