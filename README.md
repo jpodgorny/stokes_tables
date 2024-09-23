@@ -12,7 +12,8 @@ Table of contents
 Description of STOKES tables and models
 =======================================
 
-The STOKES tables and models provide spectra and polarisation properties of
+The STOKES tables and models (Podgorný et al. 2022, Podgorný 2023) provide spectra and 
+polarisation properties of
 reprocessed emission in a plane-parallel slab illuminated by an X-ray source 
 emitting power-law radiation. The incident photons may have arbitrary polarisation. 
 The reprocessing is precomputed and stored in FITS files, which are calculated for 
