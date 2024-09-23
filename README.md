@@ -123,15 +123,15 @@ _Escape probability methods versus ``exact" transfer for modelling the X-ray spe
 [A&A, 407, p.13-30](https://doi.org/10.1051/0004-6361:20030890) 
 [[arXiv:astro-ph/0306297](https://arxiv.org/abs/astro-ph/0306297)]
 
-Marin F (2018)  
-_Modeling optical and UV polarization of AGNs. V. Dilution by interstellar polarization and the host galaxy_  
-[A&A, 615, id.A171](https://doi.org/10.1051/0004-6361/201833225) 
-[[arXiv:1805.09098](https://arxiv.org/abs/1805.09098)]
-
 Goosmann RW & Gaskell CM (2007)  
 _Modeling optical and UV polarization of AGNs. I. Imprints of individual scattering regions_  
 [A&A, 465, pp.129-145](https://doi.org/10.1051/0004-6361:20053555)
 [[arXiv:astro-ph/0507072](https://arxiv.org/abs/astro-ph/0507072)]
+
+Marin F (2018)  
+_Modeling optical and UV polarization of AGNs. V. Dilution by interstellar polarization and the host galaxy_  
+[A&A, 615, id.A171](https://doi.org/10.1051/0004-6361/201833225) 
+[[arXiv:1805.09098](https://arxiv.org/abs/1805.09098)]
 
 
 Parameter definitions for STOKES tables and models
