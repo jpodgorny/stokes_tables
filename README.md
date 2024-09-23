@@ -26,7 +26,7 @@ characterised by a photon index, Γ, with sharp
 low- and high-energy cut-offs at E<sub>l</sub> ≈ 0.08 keV and E<sub>c</sub> ≈ 250 
 keV, causing ionisation of the slab, which is defined by the ionisation parameter, 
 ξ. The ionisation structure of the slab was computed using the TITAN code (Dumont et
-al. 2003), while the spectral shape and polarisation properties of the re-processed 
+al. 2003), while the spectral shape and polarisation properties of the reprocessed 
 emission were computed using the STOKES code (Goosmann & Gaskell 2007, Marin 2018).
 
 The provided tables conform to OGIP standards and can be directly used in XSPEC 
@@ -91,6 +91,7 @@ with -1 <= P <= 1,
 polarisation fraction, P; this model combines the models for unpolarised 
 illumination, `stunp`, fully vertically polarised illumination, `stvrp`, and fully polarised illumination at 45° counterclockwise from the vertical direction, `st45d`, 
 according to the equation:  
+</br>
 S(P, χ) = S(0, -) + P { [ S(100%, 0°) - S(0, -) ] cos 2χ + [ S(100%, 45°) - S(0, -) ] sin 2χ }, i.e.,  
 `stokes` = `stunp` + P * { [ `stvrp` - `stunp` ] cos 2χ + [ `st45d` - `stunp` ] sin 2χ };  
 the parameters of this model include Γ, ξ, θ<sub>i</sub>, θ<sub>e</sub>, φ, P and χ,
@@ -351,7 +352,7 @@ One can see the predicted polarisation properties in the following way:
    `data 1 fake_null_i_300ch.pha`  
    `data 2 fake_null_q_300ch.pha`  
    `data 3 fake_null_u_300ch.pha`  
-   `setplot energy`__
+   `setplot energy`
 
    the fake unit responses will be automatically loaded.
 
