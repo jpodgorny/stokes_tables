@@ -113,7 +113,7 @@ _Spectral and polarization properties of reflected X-ray emission from black hol
 [MNRAS, 510, pp.4723-4735](https://doi.org/10.1093/mnras/stab3714) 
 [[arXiv:2201.07494](https://arxiv.org/abs/2201.07494)]
 
-Podgorný J (2024)  
+Podgorný J (2023)  
 _Polarisation properties of X-ray emission from accreting supermassive black holes_  
 [PhD thesis](https://ui.adsabs.harvard.edu/abs/2024arXiv240316746P) 
 [[arXiv:2403.16746](https://arxiv.org/abs/2403.16746)]
