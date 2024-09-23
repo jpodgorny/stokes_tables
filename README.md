@@ -81,7 +81,6 @@ any polarisation fraction; the polarisation fraction, P, for the vertical
 polarisation direction is positive, while for the horizontal direction, it is 
 negative; this model combines the models for unpolarised illumination, `stunp`, and 
 fully vertcially polarised illumination, `stvrp`, according to the equation:  
-</br>
 S(P) = S(0, -) + P [ S(100%, 0°) - S(0, -) ], i.e.,  
 `stpol` = `stunp` + P * [ `stvrp` - `stunp` ];  
 the parameters of this model include Γ, ξ, θ<sub>i</sub>, θ<sub>e</sub>, φ and P, 
@@ -91,9 +90,8 @@ with -1 <= P <= 1,
 polarisation fraction, P; this model combines the models for unpolarised 
 illumination, `stunp`, fully vertically polarised illumination, `stvrp`, and fully polarised illumination at 45° counterclockwise from the vertical direction, `st45d`, 
 according to the equation:  
-</br>
 S(P, χ) = S(0, -) + P { [ S(100%, 0°) - S(0, -) ] cos 2χ + [ S(100%, 45°) - S(0, -) ] sin 2χ }, i.e.,  
-`stokes` = `stunp` + P * { [ `stvrp` - `stunp` ] cos 2χ + [ `st45d` - `stunp` ] sin 2χ };  
+`stokes` = `stunp` + P * { [ `stvrp` - `stunp` ] * cos 2χ + [ `st45d` - `stunp` ] * sin 2χ };  
 the parameters of this model include Γ, ξ, θ<sub>i</sub>, θ<sub>e</sub>, φ, P and χ,
 with 0 <= P <= 1 and -90° <= χ <= 90°.
 
