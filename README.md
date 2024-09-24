@@ -31,7 +31,8 @@ emission were computed using the STOKES code (Goosmann & Gaskell 2007, Marin 201
 
 The provided tables conform to OGIP standards and can be directly used in XSPEC 
 using the `atable` command. Four FITS tables are available for the Stokes parameters 
-i, q and u:
+i, q and u with 300 bins in 0.1 to 100 keV (see below for a link to reduced version
+of these tables with 100 bins in 1 to 10 keV):
 
 * [stokes_unpol_iso-v2.fits](https://owncloud.asu.cas.cz/index.php/s/lG7R3Ns5gDeDMkS)
 → for unpolarised isotropic illumination of the slab, i.e. the result is integrated 
