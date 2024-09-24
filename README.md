@@ -30,7 +30,7 @@ al. 2003), while the spectral shape and polarisation properties of the reprocess
 emission were computed using the STOKES code (Goosmann & Gaskell 2007, Marin 2018).
 
 The provided tables conform to OGIP standards and can be directly used in XSPEC 
-using the `atable` command. Four FITS tables are available for the Stoke parameters 
+using the `atable` command. Four FITS tables are available for the Stokes parameters 
 i, q and u:
 
 * [stokes_unpol_iso-v2.fits](https://owncloud.asu.cas.cz/index.php/s/lG7R3Ns5gDeDMkS)
