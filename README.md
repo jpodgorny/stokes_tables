@@ -30,9 +30,14 @@ al. 2003), while the spectral shape and polarisation properties of the reprocess
 emission were computed using the STOKES code (Goosmann & Gaskell 2007, Marin 2018).
 
 The provided tables conform to OGIP standards and can be directly used in XSPEC 
+<<<<<<< HEAD
+using the `atable` command. Four FITS tables are available for the Stoke parameters 
+i, q and u with 300 bins in 0.1 to 100 keV (the reduced version of these tables with 100 bins in 1 to 10 keV is also available at [stokes_tables_reduced-v2.tar.gz](https://owncloud.asu.cas.cz/index.php/s/qOcBk05jPV4bQNR)):
+=======
 using the `atable` command. Four FITS tables are available for the Stokes parameters 
 i, q and u with 300 bins in 0.1 to 100 keV (see below for a link to reduced version
 of these tables with 100 bins in 1 to 10 keV):
+>>>>>>> origin
 
 * [stokes_unpol_iso-v2.fits](https://owncloud.asu.cas.cz/index.php/s/lG7R3Ns5gDeDMkS)
 → for unpolarised isotropic illumination of the slab, i.e. the result is integrated 
@@ -60,7 +65,7 @@ cosine, μ<sub>e</sub>, and ii) allow for arbitrary polarisation fraction and
 polarisation direction of the illumination. All of them utilise the `mdefine` 
 command in XSPEC. **Note that the `mdefine` command does not work for polarisation 
 models in XSPEC versions 12.14.1b and earlier. To use the provided models, please, 
-update your XSPEC to a later version!**
+update your XSPEC to a later version!** For older versions, you may try this [workaround](#workaround-for-xspec-versions-12.14.1b-and-earlier).
 
 The following models are available:
 
@@ -73,9 +78,7 @@ thus the parameters of this model include Γ, ξ and θ<sub>e</sub>,
 
 * **`stunp`**, **`stvrp`** and **`st45d`** → redefinitions of the
 `stokes_unpol-v2.fits`, `stokes_vrpol-v2.fits` and `stokes_45deg-v2.fits` tables, 
-respectively, to use the emission angle θ<sub>e</sub> instead of its cosine, 
-μ<sub>e</sub>; the parameters of these models include Γ, ξ, θ<sub>i</sub>, 
-θ<sub>e</sub> and φ,
+respectively, to use the incident and emission angles, θ<sub>i</sub> and  θ<sub>e</sub>, instead of their cosines, μ<sub>i</sub> and μ<sub>e</sub>; the parameters of these models include Γ, ξ, θ<sub>i</sub>, θ<sub>e</sub> and φ,
 
 * **`stpol`** → for illumination polarised in vertical or horizontal directions with 
 any polarisation fraction; the polarisation fraction, P, for the vertical
@@ -317,7 +320,7 @@ to be able to fit for a specific orientation angle of the system.
 
 * Note that the `mdefine` command does not work for polarisation models in XSPEC
 versions 12.14.1b and earlier. To use the provided models, please, update your XSPEC
-to a later version!
+to a later version or try this [workaround](#workaround-for-xspec-versions-12.14.1b-and-earlier).
 
 
 Viewing the STOKES tables and models in XSPEC
@@ -359,3 +362,28 @@ One can see the predicted polarisation properties in the following way:
 
    `plot polfrac`  
    `plot polangle`  
+
+---
+
+### Workaround for XSPEC versions 12.14.1b and earlier
+
+The `mdefine` command does not work for polarisation models in versions 12.14.1b and earlier. If one does not want to update XSPEC to later version and one has XSPEC installed from the source code, then the updated 
+[`MdefExpression.cxx`](fix/MdefExpression.cxx?raw=1) file, kindly provided by Keith Arnaud, may fix the problem (tested with version 12.14.0h). 
+
+Proceed in the following way to try this fix: 
+
+* replace the original `MdefExpression.cxx` in `Xspec/src/XSFunctions/Utilities`
+  with an updated [`MdefExpression.cxx`](fix/MdefExpression.cxx?raw=1) file,
+  
+* perform `touch MdefExpression.cxx` in `Xspec/src/XSFunctions/Utilities` to ensure the following step will recompile it,
+
+* do `hmake` in `Xspec/src/XSFunctions` 
+  (HEADAS has to be initialised for `hmake` to work),
+
+* do `hmake install` in `Xspec/src/XSFunctions`.
+
+Note that when defining the models in XSPEC with `mdefine`, it is crucial to set 
+the parameter values, including their limits, correctly during their first 
+use with the `model` command. This is especially important when combining them with 
+the mixing `polrot` model. Incorrectly defined parameters may cause the models to 
+produce undefined output, which can result in the `polrot` model crashing XSPEC.
