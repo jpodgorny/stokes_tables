@@ -12,15 +12,14 @@ Table of contents
 Description of STOKES tables and models
 =======================================
 
-The STOKES tables and models (Podgorný et al. 2022, Podgorný 2023) provide spectra and 
-polarisation properties of
-reprocessed emission in a plane-parallel slab illuminated by an X-ray source 
-emitting power-law radiation. The incident photons may have arbitrary polarisation. 
-The reprocessing is precomputed and stored in FITS files, which are calculated for 
-three different states of incident polarisation. The tables include the 
-dependence on the geometry of scattering defined by the incident, emission and 
-azimuthal angles, θ<sub>i</sub>, θ<sub>e</sub> and φ. The slab is assumed to be 
-optically thick, with a constant density of 
+The STOKES tables and models (Podgorný et al. 2022, Podgorný 2023) provide spectra
+and polarisation properties of reprocessed emission in a plane-parallel slab 
+illuminated by an X-ray source emitting power-law radiation. The incident photons 
+may have arbitrary polarisation. The reprocessing is precomputed and stored in FITS 
+files, which are calculated for three different states of incident polarisation. The 
+tables include the dependence on the geometry of scattering defined by the incident, 
+emission and azimuthal angles, θ<sub>i</sub>, θ<sub>e</sub> and φ. The slab is 
+assumed to be optically thick, with a constant density of 
 n<sub>H</sub>=10<sup>15</sup>cm<sup>-3</sup>. The power-law illumination is
 characterised by a photon index, Γ, with sharp 
 low- and high-energy cut-offs at E<sub>l</sub> ≈ 0.08 keV and E<sub>c</sub> ≈ 250 
@@ -29,15 +28,9 @@ keV, causing ionisation of the slab, which is defined by the ionisation paramete
 al. 2003), while the spectral shape and polarisation properties of the reprocessed 
 emission were computed using the STOKES code (Goosmann & Gaskell 2007, Marin 2018).
 
-The provided tables conform to OGIP standards and can be directly used in XSPEC 
-<<<<<<< HEAD
+The provided tables conform to OGIP standards and can be directly used in XSPEC
 using the `atable` command. Four FITS tables are available for the Stoke parameters 
 i, q and u with 300 bins in 0.1 to 100 keV (the reduced version of these tables with 100 bins in 1 to 10 keV is also available at [stokes_tables_reduced-v2.tar.gz](https://owncloud.asu.cas.cz/index.php/s/qOcBk05jPV4bQNR)):
-=======
-using the `atable` command. Four FITS tables are available for the Stokes parameters 
-i, q and u with 300 bins in 0.1 to 100 keV (see below for a link to reduced version
-of these tables with 100 bins in 1 to 10 keV):
->>>>>>> origin
 
 * [stokes_unpol_iso-v2.fits](https://owncloud.asu.cas.cz/index.php/s/lG7R3Ns5gDeDMkS)
 → for unpolarised isotropic illumination of the slab, i.e. the result is integrated 
@@ -65,7 +58,7 @@ cosine, μ<sub>e</sub>, and ii) allow for arbitrary polarisation fraction and
 polarisation direction of the illumination. All of them utilise the `mdefine` 
 command in XSPEC. **Note that the `mdefine` command does not work for polarisation 
 models in XSPEC versions 12.14.1b and earlier. To use the provided models, please, 
-update your XSPEC to a later version!** For older versions, you may try this [workaround](#workaround-for-xspec-versions-12.14.1b-and-earlier).
+update your XSPEC to a later version!** For older versions, you may try this [workaround](#workaround-for-xspec-versions-12141b-and-earlier).
 
 The following models are available:
 
@@ -320,8 +313,7 @@ to be able to fit for a specific orientation angle of the system.
 
 * Note that the `mdefine` command does not work for polarisation models in XSPEC
 versions 12.14.1b and earlier. To use the provided models, please, update your XSPEC
-to a later version or try this [workaround](#workaround-for-xspec-versions-12.14.1b-and-earlier).
-
+to a later version or try this [workaround](#workaround-for-xspec-versions-12141b-and-earlier).
 
 Viewing the STOKES tables and models in XSPEC
 =============================================
