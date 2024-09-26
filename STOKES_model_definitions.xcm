@@ -7,7 +7,7 @@ set UNPOL stokes_unpol-v2.fits
 set VRPOL stokes_vrpol-v2.fits
 set 45POL stokes_45deg-v2.fits
 set UNPISO stokes_unpol_iso-v2.fits
-# define the STOKES polarisation models, see Podgorny et al. (2022), Podgorny (2024)
+# define the STOKES polarisation models, see Podgorny et al. (2022), Podgorny (2023)
 mdefine stunp atable{$STOKESDIR/$UNPOL}(PhoIndex, Xi, cosd(Thetai), Phi, cosd(Thetae), z) : add
 mdefine stvrp atable{$STOKESDIR/$VRPOL}(PhoIndex, Xi, cosd(Thetai), Phi, cosd(Thetae), z) : add
 mdefine st45d atable{$STOKESDIR/$45POL}(PhoIndex, Xi, cosd(Thetai), Phi, cosd(Thetae), z) : add
