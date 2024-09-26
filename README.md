@@ -367,7 +367,7 @@ One can see the predicted polarisation properties in the following way:
 
 ### Workaround for XSPEC versions 12.14.1b and earlier
 
-The `mdefine` command does not work for polarisation models in versions 12.14.1b and earlier. If one does not want to update XSPEC to later version and one has XSPEC installed from the source code, then the updated 
+The XSPEC `mdefine` command does not work for polarisation models in versions 12.14.1b and earlier. If one does not want to update XSPEC to later version and one has XSPEC installed from the source code, then the updated 
 [`MdefExpression.cxx`](fix/MdefExpression.cxx?raw=1) file, kindly provided by Keith Arnaud, may fix the problem (tested with version 12.14.0h). 
 
 Proceed in the following way to try this fix: 
