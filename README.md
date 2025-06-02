@@ -12,7 +12,7 @@ Table of contents
 Description of STOKES tables and models
 =======================================
 
-The STOKES tables and models (Podgorný et al. 2022, Podgorný 2023) provide spectra
+The STOKES tables and models (Podgorný et al. 2022, Podgorný 2023, 2025) provide spectra
 and polarisation properties of reprocessed emission in a plane-parallel slab 
 illuminated by an X-ray source emitting power-law radiation. The incident photons 
 may have arbitrary polarisation. The reprocessing is precomputed and stored in FITS 
@@ -27,10 +27,12 @@ keV, causing ionisation of the slab, which is defined by the ionisation paramete
 ξ. The ionisation structure of the slab was computed using the TITAN code (Dumont et
 al. 2003), while the spectral shape and polarisation properties of the reprocessed 
 emission were computed using the STOKES code (Goosmann & Gaskell 2007, Marin 2018).
+In addition, a pure neutral version of the tables was recently produced (Podgorný 2025).
 
 The provided tables conform to OGIP standards and can be directly used in XSPEC
 using the `atable` command. Four FITS tables are available for the Stoke parameters 
-i, q and u with 300 bins in 0.1 to 100 keV (the reduced version of these tables with 100 bins in 1 to 10 keV is also available at [stokes_tables_reduced-v2.tar.gz](https://owncloud.asu.cas.cz/index.php/s/qOcBk05jPV4bQNR)):
+i, q and u with 300 bins in 0.1 to 100 keV (the reduced version of the partially ionized
+tables with 100 bins in 1 to 10 keV is also available at [stokes_tables_reduced-v2.tar.gz](https://owncloud.asu.cas.cz/index.php/s/qOcBk05jPV4bQNR)):
 
 * [stokes_unpol_iso-v2.fits](https://owncloud.asu.cas.cz/index.php/s/lG7R3Ns5gDeDMkS)
 → for unpolarised isotropic illumination of the slab, i.e. the result is integrated 
@@ -50,6 +52,19 @@ these tables include Γ, ξ, μ<sub>i</sub>, μ<sub>e</sub> and φ,
 vertical direction, measured counterclockwise; the parameters of 
 these tables include Γ, ξ, μ<sub>i</sub>, μ<sub>e</sub> and φ,
 
+* [stokes_unpol-neutral.fits](https://owncloud.asu.cas.cz/index.php/s/7PEbaQl6G8ZedQk)
+→ neutral for unpolarised illumination; the parameters of these tables include Γ,
+μ<sub>i</sub>, μ<sub>e</sub> and φ,
+
+* [stokes_vrpol-neutral.fits](https://owncloud.asu.cas.cz/index.php/s/rmiERAz5NNMzgF0)
+→ neutral for fully polarised illumination in the vertical direction; the parameters of
+these tables include Γ, μ<sub>i</sub>, μ<sub>e</sub> and φ,
+
+* [stokes_45deg-neutral.fits](https://owncloud.asu.cas.cz/index.php/s/ogDGNtvFytPxdwC)
+→ neutral for fully polarised illumination with a polarisation angle of 45° from the
+vertical direction, measured counterclockwise; the parameters of
+these tables include Γ, μ<sub>i</sub>, μ<sub>e</sub> and φ,
+
 where μ<sub>i</sub>=cos θ<sub>i</sub> and μ<sub>e</sub>=cos θ<sub>e</sub>.
 
 Additionally, several STOKES models, which use the above tables, are provided for 
@@ -60,7 +75,7 @@ command in XSPEC. **Note that the `mdefine` command does not work for polarisati
 models in XSPEC versions 12.14.1b and earlier. To use the provided models, please, 
 update your XSPEC to a later version!** For older versions, you may try this [workaround](#workaround-for-xspec-versions-12141b-and-earlier).
 
-The following models are available:
+The following models are available for the tables with ionization:
 
 * **`stiso`** → for unpolarised isotropic illumination; this is simply a 
 redefinition of the `stokes_unpol_iso-v2.fits` table to use the emission angle 
@@ -115,6 +130,10 @@ _Polarisation properties of X-ray emission from accreting supermassive black hol
 [PhD thesis](https://ui.adsabs.harvard.edu/abs/2024arXiv240316746P) 
 [[arXiv:2403.16746](https://arxiv.org/abs/2403.16746)]
 
+Podgorný J (2025)  
+_Shape and ionization of equatorial matter near compact objects from X-ray polarization reflection signatures_
+[[arXiv:2506.XXX](https://arxiv.org/abs/2506.XXX)]
+
 Dumont AM, Collin S, Paletou F, Coupé S, Godet O & Pelat D (2003)  
 _Escape probability methods versus ``exact" transfer for modelling the X-ray spectrum of Active Galactic Nuclei and X-ray binaries_  
 [A&A, 407, p.13-30](https://doi.org/10.1051/0004-6361:20030890) 
@@ -162,6 +181,22 @@ from the vertical direction.
 * **par4 ... Phi** [ 7.5 <= Phi <= 352.5 ]
   - azimuthal scattering angle in degrees (0.-forward, 180.-backward)
 * **par5 ... Mue** [ 0.025 <= Mue <= 0.975 ]
+  - cosine of the emission angle (0.-disc, 1.-pole)
+
+`stokes_unpol-neutral.fits`, `stokes_vrpol-neutral.fits` and `stokes_45ged-neutral.fits`
+-------------------------------------------------------------------------
+
+Tables for unpolarised illumination, fully vertically polarised illumination and
+for fully polarised illumination with a polarisation angle of 45° counterclockwise
+from the vertical direction, from a cold slab.
+
+* **par1 ... Gamma** [ 1.4 <= Gamma <= 3.0 ]
+  - photon index of the incident power-law X-ray flux
+* **par2 ... Mui** [ 0. <= Mui <= 1. ]
+  - cosine of the incident angle (0.-disc, 1.-pole)
+* **par3 ... Phi** [ 7.5 <= Phi <= 352.5 ]
+  - azimuthal scattering angle in degrees (0.-forward, 180.-backward)
+* **par4 ... Mue** [ 0.025 <= Mue <= 0.975 ]
   - cosine of the emission angle (0.-disc, 1.-pole)
 
 `stiso`
