@@ -132,7 +132,7 @@ _Polarisation properties of X-ray emission from accreting supermassive black hol
 
 Podgorný J (2025)  
 _Shape and ionization of equatorial matter near compact objects from X-ray polarization reflection signatures_
-[[arXiv:2506.XXX](https://arxiv.org/abs/2506.XXX)]
+[[arXiv:2506.01798](https://arxiv.org/abs/2506.01798)]
 
 Dumont AM, Collin S, Paletou F, Coupé S, Godet O & Pelat D (2003)  
 _Escape probability methods versus ``exact" transfer for modelling the X-ray spectrum of Active Galactic Nuclei and X-ray binaries_  
