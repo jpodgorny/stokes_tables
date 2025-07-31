@@ -87,6 +87,8 @@ these tables include kT, ξ, μ<sub>i</sub>, μ<sub>e</sub> and φ,
 vertical direction, measured counterclockwise; the parameters of 
 these tables include kT, ξ, μ<sub>i</sub>, μ<sub>e</sub> and φ.
 
+Note that the black-body reflection Stokes parameters are additionally multiplied
+by a 10<sup>-20</sup> factor for storage convenience, unlike the tables with a power-law.
 For the black-body illumination and neutral tables, isotropic versions are yet
 to be added, and the corresponding models below are yet to be constructed.
 
@@ -231,7 +233,7 @@ from the vertical direction, from a cold slab and a power-law source.
 
 Tables for unpolarised illumination, fully vertically polarised illumination and 
 for fully polarised illumination with a polarisation angle of 45° counterclockwise 
-from the vertical direction and a power-law source.
+from the vertical direction and a black-body source.
 
 * **par1 ... kT** [ 0.2 <= kT <= 10.0 ]
   - black-body temperature of the incident flux in keV
