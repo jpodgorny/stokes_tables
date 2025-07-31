@@ -12,27 +12,30 @@ Table of contents
 Description of STOKES tables and models
 =======================================
 
-The STOKES tables and models (Podgorný et al. 2022, Podgorný 2023, 2025) provide spectra
+The STOKES tables and models (Podgorný et al. 2022, 2025, Podgorný 2023, 2025) provide spectra
 and polarisation properties of reprocessed emission in a plane-parallel slab 
-illuminated by an X-ray source emitting power-law radiation. The incident photons 
-may have arbitrary polarisation. The reprocessing is precomputed and stored in FITS 
-files, which are calculated for three different states of incident polarisation. The 
-tables include the dependence on the geometry of scattering defined by the incident, 
-emission and azimuthal angles, θ<sub>i</sub>, θ<sub>e</sub> and φ. The slab is 
-assumed to be optically thick, with a constant density of 
+illuminated by an X-ray source emitting power-law or single-temperature black-body
+radiation. The incident photons may have arbitrary polarisation. The reprocessing 
+is precomputed and stored in FITS files, which are calculated for three different 
+states of incident polarisation. The tables include the dependence on the geometry
+of scattering defined by the incident, emission and azimuthal angles, θ<sub>i</sub>, 
+θ<sub>e</sub> and φ. The slab is assumed to be optically thick, with a constant density of 
 n<sub>H</sub>=10<sup>15</sup>cm<sup>-3</sup>. The power-law illumination is
-characterised by a photon index, Γ, with sharp 
-low- and high-energy cut-offs at E<sub>l</sub> ≈ 0.08 keV and E<sub>c</sub> ≈ 250 
-keV, causing ionisation of the slab, which is defined by the ionisation parameter, 
-ξ. The ionisation structure of the slab was computed using the TITAN code (Dumont et
+characterised by a photon index, Γ, with sharp low- and high-energy cut-offs 
+at E<sub>l</sub> ≈ 0.08 keV and E<sub>c</sub> ≈ 250 keV, causing ionisation of the slab, 
+which is defined by the ionisation parameter, ξ. The black-body illumination is defined
+in the same way, but has the temperature parameter, kT, instead of Γ.
+The ionisation structure of the slab was computed using the TITAN code (Dumont et
 al. 2003), while the spectral shape and polarisation properties of the reprocessed 
 emission were computed using the STOKES code (Goosmann & Gaskell 2007, Marin 2018).
-In addition, a pure neutral version of the tables was recently produced (Podgorný 2025).
+In addition, a pure neutral version of the power-law tables was recently produced 
+(Podgorný 2025).
 
 The provided tables conform to OGIP standards and can be directly used in XSPEC
-using the `atable` command. Four FITS tables are available for the Stoke parameters 
-i, q and u with 300 bins in 0.1 to 100 keV (the reduced version of the partially ionized
-tables with 100 bins in 1 to 10 keV is also available at [stokes_tables_reduced-v2.tar.gz](https://owncloud.asu.cas.cz/index.php/s/qOcBk05jPV4bQNR)):
+using the `atable` command. For the power-law, seven FITS tables are available 
+for the Stoke parameters i, q and u with 300 bins in 0.1 to 100 keV 
+(the reduced version of the partially ionized tables with 100 bins in 1 to 10 keV
+is also available at [stokes_tables_reduced-v2.tar.gz](https://owncloud.asu.cas.cz/index.php/s/qOcBk05jPV4bQNR)):
 
 * [stokes_unpol_iso-v2.fits](https://owncloud.asu.cas.cz/index.php/s/lG7R3Ns5gDeDMkS)
 → for unpolarised isotropic illumination of the slab, i.e. the result is integrated 
@@ -65,9 +68,29 @@ these tables include Γ, μ<sub>i</sub>, μ<sub>e</sub> and φ,
 vertical direction, measured counterclockwise; the parameters of
 these tables include Γ, μ<sub>i</sub>, μ<sub>e</sub> and φ,
 
-where μ<sub>i</sub>=cos θ<sub>i</sub> and μ<sub>e</sub>=cos θ<sub>e</sub>.
+where μ<sub>i</sub>=cos θ<sub>i</sub> and μ<sub>e</sub>=cos θ<sub>e</sub>. For
+the black-body, three FITS tables are available for the Stoke parameters
+i, q and u with 160 bins in 2 to 80 keV (the reduced version of the partially 
+ionized tables with 70 bins in 2 to 10 keV is also available at 
+[stokes_tables_reduced-BB.tar.gz](https://owncloud.asu.cas.cz/index.php/s/3XxmISx4emRrqzB)):
 
-Additionally, several STOKES models, which use the above tables, are provided for 
+* [stokes_unpol-BB.fits](https://owncloud.asu.cas.cz/index.php/s/LMphVANeazREZPk)
+→ for unpolarised illumination; the parameters of these tables include kT, ξ,
+μ<sub>i</sub>, μ<sub>e</sub> and φ,
+
+* [stokes_vrpol-BB.fits](https://owncloud.asu.cas.cz/index.php/s/HZ9RHPO1mUzA0R1)
+→ for fully polarised illumination in the vertical direction; the parameters of 
+these tables include kT, ξ, μ<sub>i</sub>, μ<sub>e</sub> and φ,
+
+* [stokes_45deg-BB.fits](https://owncloud.asu.cas.cz/index.php/s/cdJ8UWAMQ7awSJ9)
+→ for fully polarised illumination with a polarisation angle of 45° from the 
+vertical direction, measured counterclockwise; the parameters of 
+these tables include kT, ξ, μ<sub>i</sub>, μ<sub>e</sub> and φ.
+
+For the black-body illumination and neutral tables, isotropic versions are yet
+to be added, and the corresponding models below are yet to be constructed.
+
+Several STOKES models, which use the above tables, are provided for 
 convenience. These models i) use the emission angle, θ<sub>e</sub>, instead of its 
 cosine, μ<sub>e</sub>, and ii) allow for arbitrary polarisation fraction and 
 polarisation direction of the illumination. All of them utilise the `mdefine` 
@@ -125,6 +148,10 @@ _Spectral and polarization properties of reflected X-ray emission from black hol
 [MNRAS, 510, pp.4723-4735](https://doi.org/10.1093/mnras/stab3714) 
 [[arXiv:2201.07494](https://arxiv.org/abs/2201.07494)]
 
+Podgorný J, Dovčiak M, Goosmann RW, Marin F, Marra L, Matt G, Różańska A & Taverna R (2025)  
+_X-ray polarization of reflected thermal emission_  
+[[arXiv:2507.XXXXX](https://arxiv.org/abs/2507.XXXXX)]
+
 Podgorný J (2023)  
 _Polarisation properties of X-ray emission from accreting supermassive black holes_  
 [PhD thesis](https://ui.adsabs.harvard.edu/abs/2024arXiv240316746P) 
@@ -156,7 +183,7 @@ Parameter definitions for STOKES tables and models
 `stokes_unpol_iso-v2.fits`
 --------------------------
 
-Tables for unpolarised isotropic illumination.
+Tables for unpolarised isotropic power-law illumination.
 
 * **par1 ... Gamma** [ 1.4 <= Gamma <= 3.0 ]
   - photon index of the incident power-law X-ray flux
@@ -170,7 +197,7 @@ Tables for unpolarised isotropic illumination.
 
 Tables for unpolarised illumination, fully vertically polarised illumination and 
 for fully polarised illumination with a polarisation angle of 45° counterclockwise 
-from the vertical direction.
+from the vertical direction and a power-law source.
 
 * **par1 ... Gamma** [ 1.4 <= Gamma <= 3.0 ]
   - photon index of the incident power-law X-ray flux
@@ -188,7 +215,7 @@ from the vertical direction.
 
 Tables for unpolarised illumination, fully vertically polarised illumination and
 for fully polarised illumination with a polarisation angle of 45° counterclockwise
-from the vertical direction, from a cold slab.
+from the vertical direction, from a cold slab and a power-law source.
 
 * **par1 ... Gamma** [ 1.4 <= Gamma <= 3.0 ]
   - photon index of the incident power-law X-ray flux
@@ -197,6 +224,24 @@ from the vertical direction, from a cold slab.
 * **par3 ... Phi** [ 7.5 <= Phi <= 352.5 ]
   - azimuthal scattering angle in degrees (0.-forward, 180.-backward)
 * **par4 ... Mue** [ 0.025 <= Mue <= 0.975 ]
+  - cosine of the emission angle (0.-disc, 1.-pole)
+
+`stokes_unpol-BB.fits`, `stokes_vrpol-BB.fits` and `stokes_45ged-BB.fits`
+-------------------------------------------------------------------------
+
+Tables for unpolarised illumination, fully vertically polarised illumination and 
+for fully polarised illumination with a polarisation angle of 45° counterclockwise 
+from the vertical direction and a power-law source.
+
+* **par1 ... kT** [ 0.2 <= kT <= 10.0 ]
+  - black-body temperature of the incident flux in keV
+* **par2 ... Xi** [ 10. <= Xi <= 20 000. ]
+  - ionisation parameter of the slab
+* **par3 ... Mui** [ 0. <= Mui <= 1. ]
+  - cosine of the incident angle (0.-disc, 1.-pole)
+* **par4 ... Phi** [ 7.5 <= Phi <= 352.5 ]
+  - azimuthal scattering angle in degrees (0.-forward, 180.-backward)
+* **par5 ... Mue** [ 0.025 <= Mue <= 0.975 ]
   - cosine of the emission angle (0.-disc, 1.-pole)
 
 `stiso`
