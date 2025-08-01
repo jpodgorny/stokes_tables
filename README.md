@@ -152,7 +152,7 @@ _Spectral and polarization properties of reflected X-ray emission from black hol
 
 Podgorný J, Dovčiak M, Goosmann RW, Marin F, Marra L, Matt G, Różańska A & Taverna R (2025)  
 _X-ray polarization of reflected thermal emission_  
-[[arXiv:2507.XXXXX](https://arxiv.org/abs/2507.XXXXX)]
+[[arXiv:2507.23687](https://arxiv.org/abs/2507.23687)]
 
 Podgorný J (2023)  
 _Polarisation properties of X-ray emission from accreting supermassive black holes_  
