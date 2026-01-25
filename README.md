@@ -72,17 +72,17 @@ where μ<sub>i</sub>=cos θ<sub>i</sub> and μ<sub>e</sub>=cos θ<sub>e</sub>. F
 the black-body, three FITS tables are available for the Stoke parameters
 i, q and u with 160 bins in 2 to 80 keV (the reduced version of the partially 
 ionized tables with 70 bins in 2 to 10 keV is also available at 
-[stokes_tables_reduced-BB.tar.gz](https://owncloud.asu.cas.cz/index.php/s/3XxmISx4emRrqzB)):
+[stokesBB_tables_reduced-v2.tar.gz](https://owncloud.asu.cas.cz/index.php/s/3XxmISx4emRrqzB)):
 
-* [stokes_unpol-BB.fits](https://owncloud.asu.cas.cz/index.php/s/LMphVANeazREZPk)
+* [stokesBB_unpol-v2.fits](https://owncloud.asu.cas.cz/index.php/s/LMphVANeazREZPk)
 → for unpolarised illumination; the parameters of these tables include kT, ξ,
 μ<sub>i</sub>, μ<sub>e</sub> and φ,
 
-* [stokes_vrpol-BB.fits](https://owncloud.asu.cas.cz/index.php/s/HZ9RHPO1mUzA0R1)
+* [stokesBB_vrpol-v2.fits](https://owncloud.asu.cas.cz/index.php/s/HZ9RHPO1mUzA0R1)
 → for fully polarised illumination in the vertical direction; the parameters of 
 these tables include kT, ξ, μ<sub>i</sub>, μ<sub>e</sub> and φ,
 
-* [stokes_45deg-BB.fits](https://owncloud.asu.cas.cz/index.php/s/cdJ8UWAMQ7awSJ9)
+* [stokesBB_45deg-v2.fits](https://owncloud.asu.cas.cz/index.php/s/cdJ8UWAMQ7awSJ9)
 → for fully polarised illumination with a polarisation angle of 45° from the 
 vertical direction, measured counterclockwise; the parameters of 
 these tables include kT, ξ, μ<sub>i</sub>, μ<sub>e</sub> and φ.
