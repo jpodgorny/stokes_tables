@@ -142,7 +142,7 @@ _Spectral and polarization properties of reflected X-ray emission from black hol
 [MNRAS, 510, pp.4723-4735](https://doi.org/10.1093/mnras/stab3714) 
 [[arXiv:2201.07494](https://arxiv.org/abs/2201.07494)]
 
-Podgorný J, Dovčiak M, Goosmann RW, Marin F, Marra L, Matt G, Różańska A & Taverna R (2026, submitted)
+Podgorný J, Dovčiak M, Goosmann RW, Marin F, Marra L, Matt G, Różańska A & Taverna R (2026, submitted)  
 _X-ray polarization of reflected thermal emission_  
 [[arXiv:2507.23687](https://arxiv.org/abs/2507.23687)]
 
