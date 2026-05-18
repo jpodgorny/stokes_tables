@@ -23,7 +23,7 @@ XSPEC.
 Description of STOKES tables and models
 =======================================
 
-The STOKES tables and models (Podgorný et al. 2022, 2025, Podgorný 2023, 2025) provide spectra
+The STOKES tables and models (Podgorný et al. 2022, 2026, Podgorný 2023, 2025) provide spectra
 and polarisation properties of rest-frame reprocessed emission in a plane-parallel slab
 illuminated by an X-ray source emitting power-law radiation. The incident photons may have
 arbitrary polarisation. The reprocessing is precomputed and stored in FITS files,
@@ -142,7 +142,7 @@ _Spectral and polarization properties of reflected X-ray emission from black hol
 [MNRAS, 510, pp.4723-4735](https://doi.org/10.1093/mnras/stab3714) 
 [[arXiv:2201.07494](https://arxiv.org/abs/2201.07494)]
 
-Podgorný J, Dovčiak M, Goosmann RW, Marin F, Marra L, Matt G, Różańska A & Taverna R (2025, submitted)  
+Podgorný J, Dovčiak M, Goosmann RW, Marin F, Marra L, Matt G, Różańska A & Taverna R (2026, submitted)
 _X-ray polarization of reflected thermal emission_  
 [[arXiv:2507.23687](https://arxiv.org/abs/2507.23687)]
 
@@ -306,7 +306,7 @@ Required files
 ==============
 
 * **STOKES tables** with 300 bins in 0.1 to 100 keV:
-  - [stokes_unpol_iso-v2.0.fits](https://owncloud.asu.cas.cz/index.php/s/lG7R3Ns5gDeDMkS)
+  - [stokes_unpol_iso-v2.0.fits](https://owncloud.asu.cas.cz/index.php/s/axwKrDyAM2mgGV4)
   - [stokes_unpol-v2.0.fits](https://owncloud.asu.cas.cz/index.php/s/dtShnA2HYb6lvdR)
   - [stokes_vrpol-v2.0.fits](https://owncloud.asu.cas.cz/index.php/s/06rK1zxDJMhb4CV)
   - [stokes_45deg-v2.0.fits](https://owncloud.asu.cas.cz/index.php/s/BH6GMtbJUanNlB8)
