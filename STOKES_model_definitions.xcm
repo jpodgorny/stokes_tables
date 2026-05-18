@@ -3,9 +3,9 @@
 #set STOKESDIR /home/dovciak/data
 set STOKESDIR .
 # let's define the tables to be used (e.g. the full ones or the reduced ones)
-set UNPOL stokes_unpol-v2.fits
-set VRPOL stokes_vrpol-v2.fits
-set 45POL stokes_45deg-v2.fits
+set UNPOL stokes_unpol-v2.0.fits
+set VRPOL stokes_vrpol-v2.0.fits
+set 45POL stokes_45deg-v2.0.fits
 set UNPISO stokes_unpol_iso-v2.0.fits
 # define the STOKES polarisation models, see Podgorny et al. (2022), Podgorny (2023)
 mdefine stunp atable{$STOKESDIR/$UNPOL}(PhoIndex, Xi, cosd(Thetai), Phi, cosd(Thetae), z) : add
