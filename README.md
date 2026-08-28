@@ -46,7 +46,7 @@ The provided tables conform to OGIP standards and can be directly used in XSPEC
 using the `atable` command. For the power-law, seven FITS tables are available 
 for the Stoke parameters i, q and u with 300 bins in 0.1 to 100 keV 
 (the reduced version of the partially ionized tables with 100 bins in 1 to 10 keV
-is also available at [stokes_tables_reduced-v2.0.tar.gz](https://owncloud.asu.cas.cz/index.php/s/qOcBk05jPV4bQNR)):
+is also available at [stokes_tables_reduced-v2.0.tar.gz](https://owncloud.asu.cas.cz/index.php/s/hEpgNrJMQYyCRU2)):
 
 * [stokes_unpol_iso-v2.0.fits](https://owncloud.asu.cas.cz/index.php/s/kSahU4t4GnyT5GQ)
 → for unpolarised isotropic illumination of the slab, i.e. the result is integrated 
@@ -312,7 +312,7 @@ Required files
   - [stokes_45deg-v2.0.fits](https://owncloud.asu.cas.cz/index.php/s/BH6GMtbJUanNlB8)
 
 * or **reduced STOKES tables** with 100 bins in 1 to 10 keV:
-  - [stokes_tables_reduced-v2.0.tar.gz](https://owncloud.asu.cas.cz/index.php/s/qOcBk05jPV4bQNR)
+  - [stokes_tables_reduced-v2.0.tar.gz](https://owncloud.asu.cas.cz/index.php/s/hEpgNrJMQYyCRU2)
 
 * **package containing the fake null data and unit repsonses**
   - [fake_null_iqu_300ch.tar.gz](https://owncloud.asu.cas.cz/index.php/s/Flk6cwYLISmw0D5)
@@ -339,7 +339,7 @@ Usage in XSPEC
   [stokes_unpol-v2.0.fits](https://owncloud.asu.cas.cz/index.php/s/dtShnA2HYb6lvdR),
   [stokes_vrpol-v2.0.fits](https://owncloud.asu.cas.cz/index.php/s/06rK1zxDJMhb4CV),
   [stokes_45deg-v2.0.fits](https://owncloud.asu.cas.cz/index.php/s/BH6GMtbJUanNlB8)),
-  or the reduced STOKES tables ([stokes_tables_reduced-v2.0.tar.gz](https://owncloud.asu.cas.cz/index.php/s/qOcBk05jPV4bQNR)). Note that the latter needs to be uncompressed with the command:
+  or the reduced STOKES tables ([stokes_tables_reduced-v2.0.tar.gz](https://owncloud.asu.cas.cz/index.php/s/hEpgNrJMQYyCRU2)). Note that the latter needs to be uncompressed with the command:
   `tar -xzf stokes_tables_reduced-v2.0.tar.gz`.
 
 3. **Download the package containing the fake null data and unit repsonses**
